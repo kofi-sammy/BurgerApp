@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 
 import BuildControl from './BuildControl';
 import styles from './BuildControls.module.css';
@@ -26,7 +26,8 @@ const BuildControls = (props) => {
                 />
             ))}
              <button className={styles.OrderButton}
-              disabled={!props.purchasable}>ORDER NOW</button>
+              disabled={!props.purchasable}
+              onClick={props.purchasing}>ORDER NOW</button>
         </div>
     )
 }
